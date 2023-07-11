@@ -57,10 +57,10 @@ struct PostView: View {
 struct PostView_Previews: PreviewProvider {
     static var previews: some View {
         PostView(
-            handle: "edmylett",
-            post: "I want you to know I proud of you... even if you are doing all you can and you still feel like that's not enough...",
-            replies: 11,
-            likes: 57
+            handle: PreviewPost.handle,
+            post: PreviewPost.post,
+            replies: PreviewPost.replies,
+            likes: PreviewPost.likes
         )
     }
 }

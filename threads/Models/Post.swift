@@ -7,14 +7,15 @@
 
 import Foundation
 
-struct Post {
+// MARK: 🧵 Thread
+class Post: ObservableObject {
     var id: UUID
     var handle: String
     var post: String
-    var replies: [UUID] // [Post.id]
-    var likes: [UUID] // [User.id]
+    var replies: Int // [Post.id]
+    var likes: Int // [User.id]
     
-    init(id: UUID = UUID(), handle: String, post: String, replies: [UUID] = [] ,likes: [UUID] = []) {
+    init(id: UUID = UUID(), handle: String, post: String, replies: Int, likes: Int) {
         self.id = id
         self.handle = handle
         self.post = post
