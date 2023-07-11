@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 extension Image {
-    func tabStyle () -> some View {
+    func tabStyle() -> some View {
         self.resizable()
             .aspectRatio(contentMode: .fill)
             .frame(maxWidth: 24.0, maxHeight: 24.0)

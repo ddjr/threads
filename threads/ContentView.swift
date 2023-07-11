@@ -8,10 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var activeTab = Tab.home
     var body: some View {
         VStack {
-            NewsFeedView(posts: PreviewPosts)
-            TabView()
+            switch activeTab {
+            case Tab.home:
+                    NewsFeedView(posts: PreviewPosts)
+            case Tab.search:
+                Text("search")
+            case Tab.post:
+                Text("post")
+            case Tab.activity:
+                Text("activity")
+            case Tab.profile:
+                Text("profile")
+            }
+            TabView(activeTab: $activeTab)
         }
     }
 }
