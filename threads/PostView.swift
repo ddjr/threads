@@ -17,6 +17,7 @@ struct PostView: View {
         HStack(alignment: .top) {
             Image(systemName: "person.circle.fill")
                 .padding(.top, 2)
+                .font(.title)
             VStack(alignment: .leading) {
                 HStack {
                     Text(handle)

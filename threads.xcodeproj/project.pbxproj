@@ -19,6 +19,11 @@
 		3EE2E8172A5CD7A200F9CF50 /* PreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE2E8162A5CD7A200F9CF50 /* PreviewData.swift */; };
 		3EE2E8192A5CDA8400F9CF50 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE2E8182A5CDA8400F9CF50 /* Tab.swift */; };
 		3EE2E81B2A5CDAB200F9CF50 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE2E81A2A5CDAB200F9CF50 /* Extensions.swift */; };
+		3EE2E81D2A5CF84C00F9CF50 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE2E81C2A5CF84C00F9CF50 /* ProfileView.swift */; };
+		3EE2E81F2A5CFB2700F9CF50 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE2E81E2A5CFB2700F9CF50 /* ProfileHeaderView.swift */; };
+		3EE2E8232A5CFF8D00F9CF50 /* ActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE2E8222A5CFF8D00F9CF50 /* ActionView.swift */; };
+		3EE2E8252A5D038300F9CF50 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE2E8242A5D038300F9CF50 /* ActivityView.swift */; };
+		3EE2E8272A5D040F00F9CF50 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE2E8262A5D040F00F9CF50 /* SearchView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +40,11 @@
 		3EE2E8162A5CD7A200F9CF50 /* PreviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewData.swift; sourceTree = "<group>"; };
 		3EE2E8182A5CDA8400F9CF50 /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
 		3EE2E81A2A5CDAB200F9CF50 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		3EE2E81C2A5CF84C00F9CF50 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		3EE2E81E2A5CFB2700F9CF50 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
+		3EE2E8222A5CFF8D00F9CF50 /* ActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionView.swift; sourceTree = "<group>"; };
+		3EE2E8242A5D038300F9CF50 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
+		3EE2E8262A5D040F00F9CF50 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +81,13 @@
 				3EE2E8132A5CA69600F9CF50 /* Models */,
 				3EE2E7FB2A5C852500F9CF50 /* ContentView.swift */,
 				3EE2E8112A5CA5F100F9CF50 /* TabView.swift */,
+				3EE2E81C2A5CF84C00F9CF50 /* ProfileView.swift */,
+				3EE2E81E2A5CFB2700F9CF50 /* ProfileHeaderView.swift */,
 				3EE2E80D2A5C8CC200F9CF50 /* NewsFeedView.swift */,
+				3EE2E8242A5D038300F9CF50 /* ActivityView.swift */,
+				3EE2E8262A5D040F00F9CF50 /* SearchView.swift */,
 				3EE2E80B2A5C8C4D00F9CF50 /* PostView.swift */,
+				3EE2E8222A5CFF8D00F9CF50 /* ActionView.swift */,
 				3EE2E7FD2A5C852600F9CF50 /* Assets.xcassets */,
 				3EE2E8072A5C866100F9CF50 /* user.png */,
 				3EE2E7FF2A5C852600F9CF50 /* Preview Content */,
@@ -170,12 +185,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EE2E8232A5CFF8D00F9CF50 /* ActionView.swift in Sources */,
 				3EE2E8172A5CD7A200F9CF50 /* PreviewData.swift in Sources */,
+				3EE2E8252A5D038300F9CF50 /* ActivityView.swift in Sources */,
 				3EE2E7FC2A5C852500F9CF50 /* ContentView.swift in Sources */,
+				3EE2E81F2A5CFB2700F9CF50 /* ProfileHeaderView.swift in Sources */,
+				3EE2E81D2A5CF84C00F9CF50 /* ProfileView.swift in Sources */,
 				3EE2E80E2A5C8CC200F9CF50 /* NewsFeedView.swift in Sources */,
 				3EE2E80C2A5C8C4D00F9CF50 /* PostView.swift in Sources */,
 				3EE2E81B2A5CDAB200F9CF50 /* Extensions.swift in Sources */,
 				3EE2E7FA2A5C852500F9CF50 /* threadsApp.swift in Sources */,
+				3EE2E8272A5D040F00F9CF50 /* SearchView.swift in Sources */,
 				3EE2E8192A5CDA8400F9CF50 /* Tab.swift in Sources */,
 				3EE2E8122A5CA5F100F9CF50 /* TabView.swift in Sources */,
 				3EE2E8102A5C98EC00F9CF50 /* Post.swift in Sources */,

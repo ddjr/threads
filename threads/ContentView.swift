@@ -13,15 +13,16 @@ struct ContentView: View {
         VStack {
             switch activeTab {
             case Tab.home:
-                    NewsFeedView(posts: PreviewPosts)
+               NewsFeedView(posts: PreviewPosts)
             case Tab.search:
-                Text("search")
+                SearchView()
             case Tab.post:
                 Text("post")
+                    .frame(maxHeight: .infinity)
             case Tab.activity:
-                Text("activity")
+                ActivityView()
             case Tab.profile:
-                Text("profile")
+                ProfileView()
             }
             TabView(activeTab: $activeTab)
         }

@@ -17,13 +17,12 @@ struct TabView: View {
                 .onTapGesture {
                     activeTab = Tab.home
                 }
-                
             Spacer()
             Image(systemName: "magnifyingglass")
                 .tabStyle()
                 .foregroundColor(activeTab == Tab.search ? .primary : .secondary)
                 .onTapGesture {
-                    activeTab = Tab.search
+                     activeTab = Tab.search
                 }
             Spacer()
             Image(systemName: "square.and.pencil")
@@ -37,14 +36,14 @@ struct TabView: View {
                 .tabStyle()
                 .foregroundColor(activeTab == Tab.activity ? .primary : .secondary)
                 .onTapGesture {
-                    activeTab = Tab.activity
+                     activeTab = Tab.activity
                 }
             Spacer()
             Image(systemName: "person")
                 .tabStyle()
                 .foregroundColor(activeTab == Tab.profile ? .primary : .secondary)
                 .onTapGesture {
-                    activeTab = Tab.profile
+                     activeTab = Tab.profile
                 }
         }
         .padding(.horizontal, 20.0)
