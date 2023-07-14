@@ -11,6 +11,7 @@ struct PostView: View {
     @State var post: Post
     @State var showReplyThreadView = false
     @State private var liked: Bool = false
+    @State private var reposted: Bool = false
     var body: some View {
         NavigationStack {
             HStack(alignment: .top) {
@@ -33,12 +34,18 @@ struct PostView: View {
                             .foregroundColor(liked ? .red : .black)
                             .onTapGesture {
                                 liked.toggle()
+                                // TODO: Add like func
                             }
                         Image(systemName: "message")
                             .onTapGesture {
                                 showReplyThreadView = true
                             }
                         Image(systemName: "arrow.2.squarepath")
+                            .foregroundColor(reposted ? .green : .black)
+                            .onTapGesture {
+                                reposted = true
+                                // TODO: Add repost func
+                            }
                         Image(systemName: "paperplane")
                     }
                     .padding(.top, 1)
