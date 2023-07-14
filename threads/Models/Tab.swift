@@ -10,7 +10,6 @@ import Foundation
 enum Tab: String {
     case home = "home"
     case search = "search"
-    case post = "post"
     case activity = "activity"
     case profile = "profile"
 }

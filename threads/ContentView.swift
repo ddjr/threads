@@ -9,23 +9,31 @@ import SwiftUI
 
 struct ContentView: View {
     @State var activeTab = Tab.home
+    @State private var ShowNewThreadView = false
+    @State private var ShowReplyThreadView = false
+    @State private var isMyProfile = false
+    
     var body: some View {
-        VStack {
-            switch activeTab {
-            case Tab.home:
-               NewsFeedView(posts: PreviewPosts)
-            case Tab.search:
-                SearchView()
-            case Tab.post:
-                Text("post")
-                    .frame(maxHeight: .infinity)
-            case Tab.activity:
-                ActivityView()
-            case Tab.profile:
-                ProfileView()
+        NavigationStack {
+            VStack {
+                switch activeTab {
+                case Tab.home:
+                    NewsFeedView(posts: PreviewPosts)
+                case Tab.search:
+                    SearchView()                    
+                case Tab.activity:
+                    ActivityView()
+                case Tab.profile:
+                    ProfileView(isMyProfile: isMyProfile)
+                }
+                TabView(activeTab: $activeTab, isPresented: $ShowNewThreadView)
             }
-            TabView(activeTab: $activeTab)
         }
+        .sheet(isPresented: $ShowNewThreadView) {
+            NewThreadView()
+                .padding()
+        }
+     
     }
 }
 

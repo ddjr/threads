@@ -8,60 +8,63 @@
 import SwiftUI
 
 struct PostView: View {
-    @State var handle: String
-    @State var post: String
-    @State var replies: Int
-    @State var likes: Int
-
+    @State var post: Post
+    @State var showReplyThreadView = false
+    @State private var liked: Bool = false
     var body: some View {
-        HStack(alignment: .top) {
-            Image(systemName: "person.circle.fill")
-                .padding(.top, 2)
-                .font(.title)
-            VStack(alignment: .leading) {
-                HStack {
-                    Text(handle)
-                        .underline()
+        NavigationStack {
+            HStack(alignment: .top) {
+                ThreadLineView()
+                VStack(alignment: .leading) {
+                    HStack {
+                        Text(post.handle)
+                            .underline()
                         
-                    Spacer()
-                    Text("4m")
-                        .fontWeight(.ultraLight)
-                    Image(systemName: "ellipsis")
-                }
-                Text(post)
-                    .lineSpacing(5)
+                        Spacer()
+                        Text("4m")
+                            .fontWeight(.ultraLight)
+                        Image(systemName: "ellipsis")
+                    }
+                    Text(post.post)
+                        .lineSpacing(5)
+                        .padding(.top, 1)
+                    HStack {
+                        Image(systemName: liked ? "heart.fill" : "heart")
+                            .foregroundColor(liked ? .red : .black)
+                            .onTapGesture {
+                                liked.toggle()
+                            }
+                        Image(systemName: "message")
+                            .onTapGesture {
+                                showReplyThreadView = true
+                            }
+                        Image(systemName: "arrow.2.squarepath")
+                        Image(systemName: "paperplane")
+                    }
                     .padding(.top, 1)
-                HStack {
-                    Image(systemName: "heart")
-                    Image(systemName: "message")
-                    Image(systemName: "arrow.2.squarepath")
-                    Image(systemName: "paperplane")
+                    HStack {
+                        Text("\(post.replies) replies")
+                            .fontWeight(.ultraLight)
+                            .underline()
+                        Text("•")
+                            .fontWeight(.ultraLight)
+                        Text("\(post.likes) likes")
+                            .fontWeight(.ultraLight)
+                            .underline()
+                    }
+                    .padding(.top, 2)
                 }
-                .padding(.top, 1)
-                HStack {
-                    Text("\(replies) replies")
-                        .fontWeight(.ultraLight)
-                        .underline()
-                    Text("•")
-                        .fontWeight(.ultraLight)
-                    Text("\(likes) likes")
-                        .fontWeight(.ultraLight)
-                        .underline()
-                }
-                .padding(.top, 2)
             }
+            .padding(.horizontal)
         }
-        .padding()
+        .sheet(isPresented: $showReplyThreadView) {
+            ReplyThreadView(post: $post)
+        }
     }
 }
 
 struct PostView_Previews: PreviewProvider {
     static var previews: some View {
-        PostView(
-            handle: PreviewPost.handle,
-            post: PreviewPost.post,
-            replies: PreviewPost.replies,
-            likes: PreviewPost.likes
-        )
+        PostView(post: PreviewPost)
     }
 }

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct TabView: View {
     @Binding var activeTab: Tab
+    @Binding var isPresented: Bool
     var body: some View {
         HStack {
             Image(systemName: "house")
@@ -27,9 +28,9 @@ struct TabView: View {
             Spacer()
             Image(systemName: "square.and.pencil")
                 .tabStyle()
-                .foregroundColor(activeTab == Tab.post ? .primary : .secondary)
+                .foregroundColor(.secondary)
                 .onTapGesture {
-                    activeTab = Tab.post
+                    isPresented = true
                 }
             Spacer()
             Image(systemName: "heart")
@@ -53,6 +54,6 @@ struct TabView: View {
 
 struct TabView_Previews: PreviewProvider {
     static var previews: some View {
-        TabView(activeTab: .constant(Tab.home))
+        TabView(activeTab: .constant(Tab.home), isPresented: .constant(true))
     }
 }

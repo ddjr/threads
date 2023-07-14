@@ -12,12 +12,7 @@ struct NewsFeedView: View {
     var body: some View {
         ScrollView {
             ForEach(posts, id: \.id) { post in
-                PostView(
-                    handle: post.handle,
-                    post: post.post,
-                    replies: post.replies,
-                    likes: post.likes
-                )
+                PostView(post: post)
                 Divider()
             }
         }
