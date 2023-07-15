@@ -6,8 +6,10 @@
 //
 
 import SwiftUI
+import FirebaseAuth
+import FirebaseFirestore
 
-struct NewThreadView: View {
+struct NewThreadSheet: View {
     @State private var threadText: String = ""
     var body: some View {
         VStack {
@@ -41,8 +43,8 @@ struct NewThreadView: View {
     }
 }
 
-struct NewThreadView_Previews: PreviewProvider {
+struct NewThreadSheet_Previews: PreviewProvider {
     static var previews: some View {
-        NewThreadView()
+        NewThreadSheet()
     }
 }

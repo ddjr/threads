@@ -12,6 +12,7 @@ struct PostView: View {
     @State var showReplyThreadView = false
     @State private var liked: Bool = false
     @State private var reposted: Bool = false
+
     var body: some View {
         NavigationStack {
             HStack(alignment: .top) {

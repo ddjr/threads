@@ -30,7 +30,7 @@ struct ContentView: View {
             }
         }
         .sheet(isPresented: $ShowNewThreadView) {
-            NewThreadView()
+            NewThreadSheet()
                 .padding()
         }
      

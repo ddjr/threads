@@ -34,7 +34,7 @@ struct ReplyThreadView: View {
                         
                 }
             }
-            NewThreadView()
+            NewThreadSheet()
         }
         .padding([.horizontal, .top])
     }

@@ -6,17 +6,26 @@
 //
 
 import SwiftUI
+import Foundation
 
 struct ActivityView: View {
     var body: some View {
-        ScrollView {
+        NavigationStack {
             VStack {
-                ForEach((1...10), id: \.self) { i in
-                    ActionView()
-                    Divider()
+                // MARK: Search
+               
+                // MARK: Activities
+                ScrollView {
+                    VStack {
+                        ForEach((1...10), id: \.self) { i in
+                            ActionView()
+                            Divider()
+                        }
+                    }
                 }
             }
         }
+        .navigationTitle("Search")
     }
 }
 

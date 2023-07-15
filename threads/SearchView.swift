@@ -9,14 +9,20 @@ import SwiftUI
 
 struct SearchView: View {
     var body: some View {
-        ScrollView {
-            VStack {
-                ForEach(1...10, id: \.self) { i in
-                    ActionView()
-                    Divider()
+        NavigationStack {
+            // MARK: Search
+            SearchView()
+            Text("Search")
+            ScrollView {
+                VStack {
+                    ForEach(1...10, id: \.self) { i in
+                        ActionView()
+                        Divider()
+                    }
                 }
             }
         }
+        .navigationTitle("Search")
     }
 }
 
