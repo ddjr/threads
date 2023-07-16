@@ -28,24 +28,26 @@ struct PostFB {
     
     func timeSinceCreated() -> String {
         let secondsSinceCreated = Date().timeIntervalSince1970 - self.dateCreated.timeIntervalSince1970
-        let day = 84600.0 // seconds in a day
-        let hour = 3600.0 // seconds in a hour
-        let minute = 60.0 // seconds in a minute
+        let day = 84600.0   // seconds in a day
+        let hour = 3600.0   // seconds in a hour
+        let minute = 60.0   // seconds in a minute
             
-            // MARK: Challege‼️ round to the nearest week
+            // MARK: ‼️Challenge‼️
+            // round to the nearest week
+
         if secondsSinceCreated > day {
             // Round to the nearest day
-            let daysSinceCreated = (timeCreated / day).rounded()
+            let daysSinceCreated = (secondsSinceCreated / day).rounded()
             return "\(daysSinceCreated) d"
             
         } else if secondsSinceCreated > hour {
             // Round to the nearest hour
-            let hoursSinceCreated = (timeCreated / hour).rounded()
+            let hoursSinceCreated = (secondsSinceCreated / hour).rounded()
             return "\(hoursSinceCreated) h"
             
         } else if secondsSinceCreated > minute {
             // Round to the nearest minute
-            let minutesSinceCreated = (timeCreated / minute).rounded()
+            let minutesSinceCreated = (secondsSinceCreated / minute).rounded()
             return "\(minutesSinceCreated) m"
         }
         return "\(secondsSinceCreated) s"
