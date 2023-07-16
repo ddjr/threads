@@ -7,7 +7,7 @@
 
 import Foundation
 
-// MARK: 🧵 Thread
+// MARK: ‼️ Challenge: 1 ‼️ 
 class Post: ObservableObject {
     var id: UUID
     var handle: String
