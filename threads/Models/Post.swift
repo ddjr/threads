@@ -13,6 +13,7 @@ class Post: ObservableObject {
     var handle: String
     var post: String
     var replies: Int // [Post.id]
+//    var parent: Post
     var likes: Int // [User.id]
     
     init(id: UUID = UUID(), handle: String, post: String, replies: Int, likes: Int) {

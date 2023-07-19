@@ -11,7 +11,7 @@ struct NewsFeedView: View {
     let posts: [Post]
     var body: some View {
         ScrollView {
-            ForEach(posts, id: \.id) { post in
+            ForEach(posts,  id: \.id) { post in
                 PostView(post: post)
                 Divider()
             }

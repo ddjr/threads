@@ -8,6 +8,7 @@
 import Foundation
 
 var PreviewPost = Post (
+    id: UUID(),
     handle: "edmylett",
     post: "I want you to know I am proud of you... even if you are doing all you can and you still feel like that's not enough...",
     replies: 11,

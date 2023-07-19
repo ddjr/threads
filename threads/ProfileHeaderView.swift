@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ProfileHeaderView: View {
+//    @StateObject var firebase = FirebaseModel()
+//    var user = firebase.fetchUser()
+    
     var body: some View {
         VStack(alignment: .leading) {
         HStack {
@@ -15,19 +18,19 @@ struct ProfileHeaderView: View {
                 Text("David Daly")
                     .font(.title)
                     .bold()
-                Text("david.daly.jr")
+                Text("thedaviddaly")
             }
             Spacer()
             Image(systemName: "person.circle.fill")
                 .padding(.top, 2)
                 .font(.largeTitle)
         }
-        Text("Just a city boy born and raised in south Detroit...")
+        Text("jsut a city boy, born and raised in south detroit")
                 .padding(.top, 1)
                 .font(.subheadline)
             HStack {
                 Image(systemName: "person.3")
-                Text("112 Followers")
+                Text("\(1222) Followers")
                     .foregroundColor(.secondary)
             }
             .padding(.top, 1)
